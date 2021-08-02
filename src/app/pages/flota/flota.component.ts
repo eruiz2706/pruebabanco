@@ -15,6 +15,7 @@ export class FlotaComponent implements OnInit, OnDestroy {
   flota!: Flota;
   userLogo:string = "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=335&q=80";
   userCargo:string = "Gerente de Relacion";
+  nit:string = "800220154";
 
   
   constructor(
@@ -27,7 +28,7 @@ export class FlotaComponent implements OnInit, OnDestroy {
 
   init(): void {
 
-    this.flotasService.getFlota("800220154")
+    this.flotasService.getFlota(this.nit)
     .pipe(takeUntil(this.unsubscribe$))
     .subscribe((flota)=>{
       this.flota = flota;
