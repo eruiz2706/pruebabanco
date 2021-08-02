@@ -1,0 +1,46 @@
+@import 
+    '../../../../variables';
+
+.opciontab{
+    display: none;
+}
+
+.backpage{
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .divider{
+        display: none;
+    }
+
+    .opciontab{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid rgb(224, 230, 233,.6);
+        
+        .opciontab-item{
+            color: rgb(156, 153, 153,.8);
+            font-weight: 500;
+        }
+    
+        .opcion-active{
+            font-weight: 700;
+            color: rgba(29, 28, 28, 0.8);
+            padding-bottom: 8px;
+            border-bottom: 4px solid $color-primary;
+        }
+    }    
+}
+
+@media only screen and (min-width: 1280px) {
+    .backpage{
+        display: block;
+
+        em{
+            font-size: 1.4rem;
+            color: $color-primary;
+        }
+    }
+}

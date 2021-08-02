@@ -1,0 +1,65 @@
+
+<app-header
+  [userImg]=userLogo
+  [userCargo]=userCargo
+  [userNombre]=flota.gerenteRelacion
+></app-header>
+
+  <section class="content">
+    <div class="container" >
+      <a href="#" class="backpage mt-3">
+        <em class="fa fa-arrow-left"></em>
+      </a>
+
+      <h3 class="text-center titulo">
+        {{flota.nombre}}
+      </h3>    
+      <h6 class="text-center text-secondary">
+        NIT: {{flota.nit}}
+      </h6>
+      <p class="text-center">
+        <strong>Capa:</strong> {{flota.capa}}  <span class="text-primary mr-3 ml-3" style="font-size: 40px;">.</span>  <strong>Segmento:</strong> {{flota.segmento}}
+      </p>
+      
+      <div  class="border-top my-3 divider"></div>
+  
+      <div class="opciontab mt-4">
+        <span class="opciontab-item opcion-active">Operacion</span>
+        <span class="opciontab-item">Indicadores</span>
+        <span class="opciontab-item">Informacion Cliente</span>
+      </div>
+  
+      
+      <h5 class="mt-4 mb-5 text-primary">Indique la linea de credito que quiere reconsiderar</h5>
+      
+      <div class="row">
+        <div class="col-6 col-md-4 offset-md-2">
+            <app-optioncard
+              [selected]=true
+              icono="fas fa-handshake"
+              titulo="Cartera Ordinaria"
+              footerText="Continuar"
+            ></app-optioncard>
+        </div>
+  
+        <div class="col-6 col-md-4">
+            <app-optioncard
+              [selected]=false
+              icono="fas fa-store-alt"
+              titulo="Leasing"
+              footerText="Continuar"
+            ></app-optioncard>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-12">
+          <app-alert
+            texto="Las demas lineas de credito no estaran disponibles por el momento"
+          ></app-alert>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <app-footer></app-footer>

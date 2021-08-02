@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import 
+    'variables';
+
+*{
+    font-size: 1rem;
+}
+
+body {
+    background-color: $color-bg;
+}
+
+.text-primary{
+    color: $color-primary !important;
+}
+
+
+.content{
+    min-height: 568px;
+    margin-top:80px;  
+
+    .container{
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .content{
+        min-height: 1024px;
+    }
+}
+
+/*********** MEDIA QUERY **********/
+@media only screen and (min-width: 1280px) {
+    .content{
+        min-height: 768px;
+    }
+}

@@ -1,0 +1,35 @@
+<header>
+    <nav class="navbar  navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+        <a href="#" id="a-iconback" class="mr-2">
+          <em class="fa fa-arrow-left iconback"></em>
+        </a>
+
+        <a class="navbar-brand" href="#">
+          <img   height="30" [src]=logoUrl alt="Logo banco occidente">
+        </a>
+        <button class="navbar-toggler"
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarHome" 
+          aria-controls="navbarHome" 
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+          >
+          <em class="fas fa-bars iconmenu"></em>
+        </button>
+  
+        <div class="user">
+          <div class="user-info">
+            <span class="user-info-nombre">{{userNombre}}</span>
+            <span class="user-info-cargo">{{userCargo}}</span>
+          </div>
+          <div class="user-avatar">
+            <img class="rounded-circle " width="50" height="50"  alt="Logo user" [src]=userImg>
+            <em class="fas fa-external-link-alt user-avatar-icon"></em>
+          </div>
+          <em class="fas fa-caret-down user-icon"></em>
+        </div>
+      </div>
+    </nav>
+  </header>
